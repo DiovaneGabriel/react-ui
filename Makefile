@@ -16,6 +16,7 @@ bash:
 	docker exec -it react-ui-frontend sh
 
 publish:
+	make build && \
 	make bash && \
 	npm login && \
 	npm publish --access public
