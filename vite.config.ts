@@ -26,7 +26,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, './src/index.ts'),
       name: 'ReactUiLib',
-      fileName: (format) => (format === 'es' ? 'index.js' : 'index.cjs'),
+      fileName: (format) => `index.${format}.js`,
       formats: ['es', 'cjs']
     },
     rollupOptions: {
