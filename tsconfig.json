@@ -1,19 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "ESNext",
     "module": "ESNext",
     "lib": ["DOM", "ESNext"],
     "jsx": "react-jsx",
+    "moduleResolution": "node",
     "declaration": true,
     "declarationDir": "dist",
-    "outDir": "dist",
-    "moduleResolution": "node",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true
+    "outDir": "dist"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "playground"]
+  "include": ["src"]
 }

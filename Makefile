@@ -1,11 +1,9 @@
 install:
 	docker run -it -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm init -y && npm i" && \
-	docker run -it -v ./playground:/app diovanegabriel/node:latest /bin/sh -c "npm install vite react react-dom --save-dev" && \
 	docker container prune -f
 
 update:
 	docker run -it -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm i" && \
-	docker run -it -v ./playground:/app diovanegabriel/node:latest /bin/sh -c "npm i" && \
 	docker container prune -f
 
 build:
