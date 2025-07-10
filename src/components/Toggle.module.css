@@ -1,0 +1,29 @@
+.toggleContainer {
+  border: var(--border);
+  border-radius: 28px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  width: 80px;
+}
+
+.toggleContainer span{
+  margin: 4px 8px;
+}
+
+.toggleContainer .toggleSwitch {
+  background-color: var(--color-dark-lighten-80);
+  border-radius: 50%;
+  height: 27px;
+  /* margin: 0 auto 0 0; */
+  width: 27px;
+}
+
+.toggleContainer.toggleOn .toggleSwitch {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  height: 27px;
+  /* margin: 0 0 0 auto; */
+  width: 27px;
+}
