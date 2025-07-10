@@ -8,3 +8,6 @@ export type { InputProps } from './components/Input';
 
 export { default as InputFile } from './components/InputFile';
 export type { ImageProps } from './components/InputFile';
+
+export { default as InputMarkdown } from './components/InputMarkdown';
+export { Markdown } from './components/InputMarkdown';

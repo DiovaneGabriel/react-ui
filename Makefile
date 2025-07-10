@@ -18,3 +18,6 @@ publish:
 	make build && \
 	docker run -it -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm login && npm publish --access public" && \
 	docker container prune -f
+
+do:
+	docker run -it -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm i --save-dev @types/markdown-it"
