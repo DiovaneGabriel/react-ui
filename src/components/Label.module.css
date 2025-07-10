@@ -1,12 +1,10 @@
 .container {
   display: flex;
   flex-direction: row;
+  gap: 12px;
 }
 
 .container.column {
   flex-direction: column;
-}
-
-.container.column label {
-  margin-bottom: 4px;
+  gap: 4px;
 }

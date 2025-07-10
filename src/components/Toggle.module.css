@@ -3,6 +3,7 @@
   border-radius: 28px;
   cursor: pointer;
   display: flex;
+  height: max-content;
   justify-content: space-between;
   padding: 3px;
   width: 80px;

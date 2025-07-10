@@ -1,0 +1,42 @@
+.input {
+  background-color: white;
+  border: solid 1px var(--color-gray);
+  border-radius: 3px;
+  padding: 6px;
+  width: 100%;
+}
+
+.input[type="number"] {
+  text-align: right;
+}
+
+.input:focus {
+  border: solid 1px var(--color-secondary);
+  outline: none;
+}
+
+.input.box {
+  background-color: var(--color-light);
+  border: solid 2px transparent;
+  border-radius: 3px;
+  font-size: .9rem;
+  padding: 6px 8px;
+}
+
+.input.box:focus {
+  border: solid 2px var(--color-dark);
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container.column {
+  flex-direction: column;
+}
+
+.container.column label {
+  margin-bottom: 4px;
+}
