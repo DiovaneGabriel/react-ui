@@ -19,6 +19,7 @@ publish:
 	make build && \
 	make bash && \
 	npm login && \
+	npm version patch && \
 	npm publish --access public
 
 up:

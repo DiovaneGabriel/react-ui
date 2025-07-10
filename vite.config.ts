@@ -4,6 +4,9 @@ import dts from 'vite-plugin-dts';
 import path from 'path';
 
 export default defineConfig({
+  define: {
+    'process.env.NODE_ENV': '"production"'
+  },
   plugins: [
     react(),
     dts({
@@ -19,6 +22,7 @@ export default defineConfig({
     // }
   },
   build: {
+    target: 'es2018',
     lib: {
       entry: path.resolve(__dirname, './src/index.ts'),
       name: 'ReactUiLib',
