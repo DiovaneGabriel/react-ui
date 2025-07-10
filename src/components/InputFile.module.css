@@ -1,0 +1,48 @@
+.inputFileContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.previewContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.previewContainer .image {
+    position: relative;
+}
+
+.previewContainer .image img {
+    border-radius: 3px;
+    height: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.previewContainer .image button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    font-weight: bold;
+    padding: 0;
+    position: absolute;
+    margin: 0;
+    right: 4px;
+    top: 4px;
+}
+
+.previewContainer .image:hover button {
+    display: block;
+}
+
+.previewContainer .image button:hover {
+    color: var(--color-primary);
+}
+
+.previewContainer .image button:active {
+    color: var(--color-secondary);
+}
