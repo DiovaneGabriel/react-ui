@@ -9,6 +9,7 @@ update:
 	docker container prune -f
 
 build:
+	sudo rm -rf ./dist && \
 	docker run -it -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm run build" && \
 	docker container prune -f
 
@@ -19,6 +20,7 @@ publish:
 	make build && \
 	make bash && \
 	npm login && \
+	npm version patch && \
 	npm publish --access public
 
 up:
