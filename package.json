@@ -1,6 +1,6 @@
 {
   "name": "dbarbieri-react-ui",
-  "version": "1.7.0",
+  "version": "1.8.5",
   "type": "module",
   "description": "React UI lib components",
   "main": "dist/index.js",
@@ -27,6 +27,7 @@
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-typescript": "^12.1.4",
+    "@svgr/rollup": "^8.1.0",
     "@types/markdown-it": "^14.1.2",
     "@types/react": "^19.1.8",
     "rollup": "^4.44.2",

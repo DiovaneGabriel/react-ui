@@ -1,0 +1,21 @@
+.loading {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-style: italic;
+  gap: 0.5rem;
+}
+
+.loading svg {
+  height: 3rem;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}

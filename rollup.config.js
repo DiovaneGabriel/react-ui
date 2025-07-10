@@ -4,6 +4,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import dts from 'rollup-plugin-dts';
+import svgr from '@svgr/rollup';
 
 export default [
   {
@@ -24,6 +25,7 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
+      svgr(),
       typescript({ tsconfig: './tsconfig.json' }),
       postcss({
         modules: true

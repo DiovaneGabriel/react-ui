@@ -1,7 +1,7 @@
 export { default as Label } from './components/Label';
 export type { LabelProps } from './components/Label';
 
-export { default as Toggle } from './components/Toggle';
+export { default as Loading } from './components/Loading';
 
 export { default as Input } from './components/Input';
 export type { InputProps } from './components/Input';
@@ -14,3 +14,5 @@ export { Markdown } from './components/InputMarkdown';
 
 export { default as InputTag } from './components/InputTag';
 export { Tags } from './components/InputTag';
+
+export { default as Toggle } from './components/Toggle';
