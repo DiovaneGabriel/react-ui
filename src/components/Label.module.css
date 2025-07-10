@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container.column {
+  flex-direction: column;
+}
+
+.container.column label {
+  margin-bottom: 4px;
+}
