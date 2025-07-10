@@ -16,10 +16,5 @@ bash:
 
 publish:
 	make build && \
-	make bash && \
-	npm login && \
-	npm version patch && \
-	npm publish --access public
-
-up:
-	docker compose up -d
+	docker run -it -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm login && npm publish --access public" && \
+	docker container prune -f

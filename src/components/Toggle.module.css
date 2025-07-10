@@ -1,5 +1,5 @@
 .toggleContainer {
-  border: var(--border);
+  border: solid 1px var(--color-gray);
   border-radius: 28px;
   cursor: pointer;
   display: flex;
@@ -13,10 +13,9 @@
 }
 
 .toggleContainer .toggleSwitch {
-  background-color: var(--color-dark-lighten-80);
+  background-color: var(--color-gray);
   border-radius: 50%;
   height: 27px;
-  /* margin: 0 auto 0 0; */
   width: 27px;
 }
 
@@ -24,6 +23,5 @@
   background-color: var(--color-primary);
   border-radius: 50%;
   height: 27px;
-  /* margin: 0 0 0 auto; */
   width: 27px;
 }
