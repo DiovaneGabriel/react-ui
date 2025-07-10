@@ -1,6 +1,6 @@
 {
   "name": "dbarbieri-react-ui",
-  "version": "1.6.3",
+  "version": "1.7.0",
   "type": "module",
   "description": "React UI lib components",
   "main": "dist/index.js",

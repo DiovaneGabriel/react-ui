@@ -1,0 +1,49 @@
+.container {
+  background-color: white;
+  border: solid 1px var(--color-gray);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.container:focus-within {
+  border: solid 1px var(--color-secondary);
+}
+
+.container input {
+  border: none;
+  width: 100%;
+  min-width: 50%;
+}
+
+.container input:focus {
+  outline: none;
+}
+
+.tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.tags .tag {
+  background-color: #ddd;
+  border-radius: 3px;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  width: max-content;
+}
+
+.tags .tag button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  height: min-content;
+  margin-top: -1px;
+  padding: 0;
+  width: min-content;
+}

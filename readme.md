@@ -1,53 +1,74 @@
-
 # dbarbieri-react-ui
 
-Biblioteca de componentes React com foco em reutilização e estilo moderno. Desenvolvida com TypeScript e suporte a CSS Modules.
+A React component library focused on reusability and modern styling. Built with TypeScript and CSS Modules support.
 
-## 📦 Instalação
+## 📦 Installation
 
 ```bash
 npm install dbarbieri-react-ui
-# ou
+# or
 yarn add dbarbieri-react-ui
 ````
 
-## 🚀 Uso
+## 🚀 Usage
 
 ```tsx
 import { Label, InputMarkdown, Markdown } from 'dbarbieri-react-ui';
 ```
 
-### Exemplo com `InputMarkdown`
+### Example with `InputMarkdown`
 
 ```tsx
 import { InputMarkdown } from 'dbarbieri-react-ui';
 
 <InputMarkdown
-  label="Conteúdo em Markdown"
+  label="Markdown Content"
   value={value}
   onChange={({ text }) => setValue(text)}
 />
 ```
 
-### Exemplo com `Markdown`
+### Example with `Markdown`
 
 ```tsx
 import { Markdown } from 'dbarbieri-react-ui';
-import 'dbarbieri-react-ui/styles/markdown.css'; // ⚠️ Importação obrigatória!
+import 'dbarbieri-react-ui/styles/markdown.css'; // ⚠️ Required import!
 
 <Markdown>
-  {`# Título\n\n**Texto em negrito** e _itálico_.`}
+  {`# Title\n\n**Bold text** and _italic_.`}
 </Markdown>
 ```
 
-## ⚠️ Importação de Estilos
+## ⚠️ Style Import
 
-Para usar o componente `Markdown` (visualização de Markdown renderizado), é necessário importar os estilos globais associados ao editor Markdown:
+To use the `Markdown` component (which renders Markdown content as HTML), you must manually import the required global styles from the markdown editor:
 
 ```tsx
-import 'dbarbieri-react-ui/styles/markdown.css';
+import 'react-markdown-editor-lite/lib/index.css';
 ```
 
-Esse CSS inclui os estilos necessários da biblioteca `react-markdown-editor-lite`.
+This CSS includes necessary styles from the `react-markdown-editor-lite` package.
 
-> ⚠️ Se você estiver usando `InputMarkdown`, **não precisa importar nada** — os estilos são carregados automaticamente!
+> ⚠️ If you're using `InputMarkdown`, **you don't need to import anything** — the styles are loaded automatically!
+
+## 🎨 Theme Customization
+
+Some colors used in the components can be customized globally by defining CSS variables in your app. To do this, create a `global.css` (or similar) and include it in your project:
+
+```css
+:root {
+  --color-primary: #0000FF;
+  --color-secondary: #000000;
+
+  --color-dark: #222;
+  --color-light: #ffffff;
+  --color-gray: #bfbfbf;
+
+  --color-success: #2E7D32;
+  --color-success-light: #C8E6C9;
+  --color-error: #C62828;
+  --color-error-light: #FFCDD2;
+  --color-warning: #ED6C02;
+  --color-warning-light: #FFE0B2;
+}
+```

@@ -11,3 +11,6 @@ export type { ImageProps } from './components/InputFile';
 
 export { default as InputMarkdown } from './components/InputMarkdown';
 export { Markdown } from './components/InputMarkdown';
+
+export { default as InputTag } from './components/InputTag';
+export { Tags } from './components/InputTag';
