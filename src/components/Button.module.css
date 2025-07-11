@@ -1,0 +1,100 @@
+.button {
+  background-color: var(--color-secondary);
+  border: solid 1px var(--color-secondary);
+  border-radius: 18px;
+  cursor: pointer;
+  padding: 10px 22px;
+  min-width: 100px;
+  width: max-content;
+}
+
+.button,
+.button:hover,
+.button:active,
+.button:focus {
+  text-decoration: none;
+}
+
+.button.primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.button.light {
+  background-color: var(--color-light);
+  border-color: var(--color-dark);
+}
+
+.button.light,
+.button.light div {
+  color: var(--color-dark);
+}
+
+.button,
+.button div {
+  color: white;
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.button svg {
+  height: 24px;
+  width: 24px;
+}
+
+.button:hover:not(:focus) {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.button.primary:hover:not(:focus),
+.button.light:hover:not(:focus) {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
+}
+
+.button.primary:hover:not(:focus) div,
+.button.light:hover:not(:focus) div {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: white;
+}
+
+.button:active,
+.button:active div {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+  color: var(--color-light);
+  ;
+}
+
+.button.loading,
+.button.loading:hover:not(:focus),
+.button.loading:active {
+  background-color: var(--color-gray);
+  border-color: var(--color-gray);
+  cursor: not-allowed;
+  padding: 5px 22px 2px 22px;
+}
+
+.button:not(.loading) svg {
+  display: none;
+}
+
+.button.loading div,
+.button.loading:hover:not(:focus) div,
+.button.loading:active div {
+  height: 0;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+}
+
+.button.min,
+.button.min div {
+  min-width: auto;
+  width: min-content;
+}

@@ -16,7 +16,7 @@ bash:
 
 publish:
 	make build && \
-	docker run -it -v .npmrc:/root/.npmrc -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm publish --access public" && \
+	docker run -it -v ./.npmrc:/root/.npmrc -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm publish --access public" && \
 	docker container prune -f
 
 do:
