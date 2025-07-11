@@ -12,6 +12,10 @@ export type { ImageProps } from './components/InputFile';
 export { default as InputMarkdown } from './components/InputMarkdown';
 export { Markdown } from './components/InputMarkdown';
 
+export { default as Select } from './components/Select';
+export type { SelectProps } from './components/Select';
+export type { OptionProps } from './components/Select';
+
 export { default as InputTag } from './components/InputTag';
 export { Tags } from './components/InputTag';
 

@@ -1,0 +1,16 @@
+.select {
+  border: solid 1px var(--color-gray);
+  border-radius: 3px;
+  background-color: white;
+  padding: 6px;
+  width: 100%;
+}
+
+.select:focus {
+  border: solid 1px var(--color-secondary);
+  outline: none;
+}
+
+.select .option {
+  max-width: 50px;
+}
