@@ -111,7 +111,7 @@ const SelectMultiple = ({ dimensions = "s12 m6 l3", label, labelPosition = 'top'
 
       props.onChange(event);
     }
-  }, [selecteds]);
+  }, [selecteds, options]);
 
   return (
     <Label dimensions={dimensions} label={label} labelPosition={labelPosition}>
