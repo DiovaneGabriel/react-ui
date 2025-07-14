@@ -14,3 +14,79 @@
 .select .option {
   max-width: 50px;
 }
+
+.selectMultipleOptionsWrapper {
+  position: relative;
+}
+
+.selectMultipleOptionsWrapper .selectMultipleButtonDown{
+  background-color: transparent;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  display: flex;
+  height: calc(100% - 2px);
+  margin: 1px 1px 1px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 18px;
+}
+
+.selectMultipleOptionsWrapper:hover .selectMultipleButtonDown,
+.selectMultipleOptionsWrapper .selectMultipleButtonDown.hovered{
+  background-color: #ddd;
+}
+
+.selectMultipleOptionsWrapper .selectMultipleButtonDown svg{
+  font-size: .85rem;
+  fill: #888;
+  margin: auto;
+}
+
+.selectMultipleOptionsWrapper .selectMultipleOptionsContainer {
+  background-color: white;
+  border: solid 1px var(--color-gray);
+  border-radius: 3px;
+  max-height: 50vh;
+  overflow-y: scroll;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.selectMultipleOptionsWrapper .selectMultipleOptionsContainer .selectMultipleOption{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 4px 12px;
+}
+
+.selectMultipleOptionsWrapper .selectMultipleOptionsContainer .selectMultipleOption .check {
+  border: solid 1px #888;
+  border-radius: 3px;
+  color: #888;
+  font-size: .6rem;
+  font-weight: 600;
+  height: 19px;
+  padding: 4px;
+  margin: auto 0;
+  opacity: .8;
+  text-align: center;
+  text-transform: uppercase;
+  width: 19px;
+}
+
+.selectMultipleOptionsWrapper .selectMultipleOptionsContainer .selectMultipleOption .check.checked {
+  background-color: var(--color-success-light);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.selectMultipleOptionsWrapper .selectMultipleOptionsContainer .selectMultipleOption .check.checked::after {
+  content: "\2714";
+}
+
+.selectMultipleOption:hover,
+.option:hover{
+  background-color: var(--color-primary);
+}

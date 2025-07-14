@@ -20,4 +20,4 @@ publish:
 	docker container prune -f
 
 do:
-	docker run -it -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm install --save-dev @svgr/rollup"
+	docker run -it -v ./:/app diovanegabriel/node:latest /bin/sh -c "npm install react-icons"
