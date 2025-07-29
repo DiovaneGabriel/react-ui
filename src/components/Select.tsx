@@ -25,16 +25,33 @@ type SelectMultipleOptionProps = Omit<LabelProps, 'children'> & {
   level: number;
   selecteds: string[];
   setSelecteds: (v: string[]) => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
-const SelectMultipleOptions = ({ options, level = 0, selecteds, setSelecteds }: SelectMultipleOptionProps) => {
+const SelectMultipleOptions = ({ options, level = 0, selecteds, setSelecteds, ...props }: SelectMultipleOptionProps) => {
 
   const handleSelect = (val: string) => {
+
+    let vals = [];
     if (selecteds.includes(val)) {
-      setSelecteds([...selecteds.filter((v) => v != val)]);
+      vals = [...selecteds.filter((v) => v != val)];
     } else {
-      setSelecteds([...selecteds, val]);
+      vals = [...selecteds, val];
     }
+
+    if (props.onChange !== undefined) {
+      
+      const event = {
+        target: {
+          selectedOptions: vals.map(value => ({ value })), // simula o HTMLCollection
+          value: '', // não importa, pode ser string vazia
+        }
+      } as unknown as React.ChangeEvent<HTMLSelectElement>;
+      
+      props.onChange(event);
+    }
+    
+    setSelecteds(vals);
   };
 
   return (
@@ -44,7 +61,7 @@ const SelectMultipleOptions = ({ options, level = 0, selecteds, setSelecteds }: 
           <div className={`${styles.check} ${selecteds.includes(opt.key) ? styles.checked : ''}`}></div>
           {`${'\u00A0'.repeat(level * 2)}${opt.value}`}
         </div>
-        {opt.children && <SelectMultipleOptions options={opt.children} level={level + 1} selecteds={selecteds} setSelecteds={setSelecteds} />}
+        {opt.children && <SelectMultipleOptions options={opt.children} level={level + 1} selecteds={selecteds} setSelecteds={setSelecteds} onChange={props.onChange} />}
       </Fragment>
     ))
   );
@@ -100,17 +117,17 @@ const SelectMultiple = ({ dimensions = "s12 m6 l3", label, labelPosition = 'top'
     }
 
     setValueText(lbl);
-    if (props.onChange !== undefined) {
+    // if (props.onChange !== undefined) {
 
-      const event = {
-        target: {
-          selectedOptions: selecteds.map(value => ({ value })), // simula o HTMLCollection
-          value: '', // não importa, pode ser string vazia
-        }
-      } as unknown as React.ChangeEvent<HTMLSelectElement>;
+    //   const event = {
+    //     target: {
+    //       selectedOptions: selecteds.map(value => ({ value })), // simula o HTMLCollection
+    //       value: '', // não importa, pode ser string vazia
+    //     }
+    //   } as unknown as React.ChangeEvent<HTMLSelectElement>;
 
-      props.onChange(event);
-    }
+    //   props.onChange(event);
+    // }
   }, [selecteds, options]);
 
   return (
@@ -126,7 +143,7 @@ const SelectMultiple = ({ dimensions = "s12 m6 l3", label, labelPosition = 'top'
         </div>
         {isFocused &&
           <div className={styles.selectMultipleOptionsContainer}>
-            <SelectMultipleOptions options={options} level={0} selecteds={selecteds} setSelecteds={setSelecteds} />
+            <SelectMultipleOptions options={options} level={0} selecteds={selecteds} setSelecteds={setSelecteds} onChange={props.onChange} />
           </div>
         }
       </div>
