@@ -1,6 +1,6 @@
 {
   "name": "dbarbieri-react-ui",
-  "version": "1.11.4",
+  "version": "1.12.0",
   "type": "module",
   "description": "React UI lib components",
   "main": "dist/index.js",
@@ -10,8 +10,8 @@
     "build": "rollup -c"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": ">=18 <20",
+    "react-dom": ">=18 <20"
   },
   "files": [
     "dist"
